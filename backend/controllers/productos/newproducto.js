@@ -1,4 +1,4 @@
-import NewModelProducto from "../../models/NewProduct";
+import NewModelProducto from "../../models/NewProduct.js";
 
 const AddProduct = async(req, res) => {
 

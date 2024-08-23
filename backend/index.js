@@ -1,6 +1,7 @@
 import express from "express"
 import Createconnectionmongo from "./database/mongo.db.js"
 import routes from "./routes/userRoutes.js"
+import routesProduct from "./routes/productRoutes.js"
 import cors from "cors"
 
 
@@ -10,6 +11,7 @@ Createconnectionmongo()
 
 
 app.use("/api", routes)
+app.use("/api", routesProduct)
 app.use(express.json())
 app.use(cors())
 
