@@ -1,6 +1,6 @@
 import NewModelUser from "../models/newuser.js";
 
-const createNewuser = async(req, res) => {
+const UpdateUser = async(req, res) => {
 
     const {name, email , password, direccion} = req.body
 
@@ -16,4 +16,4 @@ const createNewuser = async(req, res) => {
     }
 }
 
-export default createNewuser
+export default UpdateUser
