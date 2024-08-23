@@ -1,4 +1,4 @@
-import NewModelUser from "../models/newuser.js";
+import NewModelUser from "../../models/newuser.js";
 
 const deleteUser = async(req, res) => {
     

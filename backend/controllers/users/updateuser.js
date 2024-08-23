@@ -1,4 +1,4 @@
-import NewModelUser from "../models/newuser.js";
+import NewModelUser from "../../models/newuser.js";
 
 const createNewuser = async(req, res) => {
 
@@ -7,7 +7,7 @@ const createNewuser = async(req, res) => {
 
     try {
         
-        const newUser = await NewModelUser(id,{name, email , password, direccion},{new:true})
+        const newUser = await NewModelUser.findByIdAndUpdate(id,{name, email , password, direccion},{new:true})
         newUser.save()
         res.status(201).json({mjs : "usuario actualizado exitosamente"})
 

@@ -1,5 +1,5 @@
 import express from "express"
-import createNewuser from "../controllers/adduser.js"
+import createNewuser from "../controllers/users/adduser.js"
 
 
 const routes = express.Router()
