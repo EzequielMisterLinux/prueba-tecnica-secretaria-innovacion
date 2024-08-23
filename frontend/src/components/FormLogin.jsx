@@ -1,13 +1,15 @@
 import React from "react";
+import {getAndLogin} from "../hooks/useUsers"
 
 const FormLogin = () => {
 
 
+
     return (
         <>
-        
         <div>
-            <form action="" method="post">
+            {                 
+                <form onChange={getAndLogin()} method="post">
                 <label htmlFor="">Login</label>
                 
                 <input type="email" />
@@ -16,6 +18,8 @@ const FormLogin = () => {
                 <button>Register</button>
                 <a href="">no tienes una tienes una cuenta? click aqui!</a>
             </form>
+                
+            }
         </div>
         </>
     )

@@ -6,34 +6,77 @@ import {
     updateUser
 } from "../hooks/users.jsx"
 
+
+
 const getAndLogin =() => {
     const {user, setuser} = useState("")
 
     useEffect(()=>{
         const fetchData = () => {
-            return getAndLoginUser()
+            return user(getAndLoginUser())
         }
-        fetchData()
+        fetchData()  
+
     },{
-    getAndLoginUser
+        setuser
     },
     []
     )
 }
 
 const getAllUser =() => {
-    const {user, setuser} = useState("")
+    const {users, setusers} = useState("")
 
     useEffect(()=>{
         const fetchData = () => {
-            return getAndLoginUser()
+            
+            return setusers(getAllusers())
         }
         fetchData()
     },{
-    getAndLoginUser
+    users
     },
     []
     )
 }
 
-export {getAndLogin}
+const Deleteuser = () => {
+
+    const {users, setusers} = useState("")
+
+    useEffect(() => {
+        const fetchData = () => {
+            return setusers(DeleteUser())
+        }
+        fetchData()
+        ,{
+            users
+        },
+        []
+    })
+
+}
+
+const UpdateUser = () => {
+
+    const {users, setusers} = useState("")
+
+    useEffect(() => {
+        const fetchData = () => {
+            return setusers(updateUser())
+        }
+        fetchData()
+        ,{
+            users
+        },
+        []
+    })
+
+}
+
+export {
+    getAndLogin,
+    getAllUser,
+    Deleteuser,
+    UpdateUser
+}
